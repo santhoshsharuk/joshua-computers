@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Laptops - Joshua Computers</title>
+    <script type="module" crossorigin src="/joshua-computers/assets/laptops-CD5BE9XS.js"></script>
+    <link rel="modulepreload" crossorigin href="/joshua-computers/assets/firebase-By_hAIbR.js">
+    <link rel="stylesheet" crossorigin href="/joshua-computers/assets/firebase-BlgImghY.css">
+  </head>
+  <body class="bg-black text-white">
+    
+    <!-- Header (Same as Home) -->
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur border-b border-gray-800">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-heading font-bold text-white">Joshua <span class="text-lightning-yellow">Computers</span></a>
+        <nav class="hidden md:flex space-x-8">
+          <a href="/" class="text-white hover:text-lightning-yellow transition">Home</a>
+          <a href="/laptops.html" class="text-lightning-yellow transition">Laptops</a>
+          <a href="/#about" class="text-white hover:text-lightning-yellow transition">About</a>
+          <a href="/#contact" class="text-white hover:text-lightning-yellow transition">Contact</a>
+        </nav>
+        <a href="https://wa.me/918110960489" target="_blank" class="btn-primary text-sm">Chat on WhatsApp</a>
+      </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-10 flex flex-col md:flex-row gap-8">
+      
+      <!-- Filters Sidebar -->
+      <aside class="w-full md:w-1/4">
+        <div class="bg-gray-900 p-6 rounded-lg border border-gray-800 sticky top-24">
+          <h3 class="font-heading font-bold text-xl mb-6">Filters</h3>
+          
+          <!-- Brand Filter -->
+          <div class="mb-6">
+            <h4 class="font-bold mb-3 text-sm uppercase tracking-wider text-gray-400">Brand</h4>
+            <div class="space-y-2">
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input type="checkbox" class="filter-brand form-checkbox text-lightning-yellow rounded bg-gray-800 border-gray-700" value="HP">
+                <span>HP</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input type="checkbox" class="filter-brand form-checkbox text-lightning-yellow rounded bg-gray-800 border-gray-700" value="Dell">
+                <span>Dell</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input type="checkbox" class="filter-brand form-checkbox text-lightning-yellow rounded bg-gray-800 border-gray-700" value="Lenovo">
+                <span>Lenovo</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input type="checkbox" class="filter-brand form-checkbox text-lightning-yellow rounded bg-gray-800 border-gray-700" value="Asus">
+                <span>Asus</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- RAM Filter -->
+          <div class="mb-6">
+            <h4 class="font-bold mb-3 text-sm uppercase tracking-wider text-gray-400">RAM</h4>
+            <div class="space-y-2">
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input type="checkbox" class="filter-ram form-checkbox text-lightning-yellow rounded bg-gray-800 border-gray-700" value="8GB">
+                <span>8GB</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input type="checkbox" class="filter-ram form-checkbox text-lightning-yellow rounded bg-gray-800 border-gray-700" value="16GB">
+                <span>16GB</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Condition Filter -->
+          <div class="mb-6">
+            <h4 class="font-bold mb-3 text-sm uppercase tracking-wider text-gray-400">Condition</h4>
+            <div class="space-y-2">
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input type="checkbox" class="filter-condition form-checkbox text-lightning-yellow rounded bg-gray-800 border-gray-700" value="New">
+                <span>New</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input type="checkbox" class="filter-condition form-checkbox text-lightning-yellow rounded bg-gray-800 border-gray-700" value="Refurbished">
+                <span>Refurbished</span>
+              </label>
+            </div>
+          </div>
+
+          <button id="clear-filters" class="text-sm text-lightning-yellow hover:underline w-full text-left">Clear All Filters</button>
+        </div>
+      </aside>
+
+      <!-- Product Grid -->
+      <main class="w-full md:w-3/4">
+        <div class="flex justify-between items-center mb-6">
+          <h1 class="text-3xl font-heading font-bold">All Laptops</h1>
+          <span id="product-count" class="text-gray-400">Loading...</span>
+        </div>
+
+        <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Products injected via JS -->
+          <div class="col-span-full text-center py-20 text-gray-500">Loading products...</div>
+        </div>
+      </main>
+
+    </div>
+
+    <!-- Footer (Same as Home) -->
+    <footer class="bg-black pt-20 pb-10 border-t border-gray-800 mt-10">
+      <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+        &copy; 2024 Joshua Computers. All rights reserved.
+      </div>
+    </footer>
+
+  </body>
+</html>
