@@ -1,0 +1,29 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to check if user is admin
+    function isAdmin() {
+      return request.auth != null 
+        && request.auth.token.email == 'admin@joshuacomputers.com';
+    }
+    
+    // Products Collection Rules
+    match /products/{productId} {
+      allow read: if true; // Anyone can read products
+      allow write: if isAdmin(); // Only admin can create/update/delete
+    }
+    
+    // Website settings (hero video, etc.)
+    match /settings/{settingId} {
+      allow read: if true; // Anyone can read settings
+      allow write: if isAdmin(); // Only admin can update settings
+    }
+    
+    // Deny access to all other collections by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

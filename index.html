@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joshua Computers | Smart Laptops. Smart Prices.</title>
+    <link rel="stylesheet" href="./src/style.css">
+  </head>
+  <body class="bg-black text-white">
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur border-b border-gray-800">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-heading font-bold text-white">Joshua <span class="text-lightning-yellow">Computers</span></a>
+        
+        <nav class="hidden md:flex space-x-8">
+          <a href="/" class="text-white hover:text-lightning-yellow transition">Home</a>
+          <a href="/laptops.html" class="text-white hover:text-lightning-yellow transition">Laptops</a>
+          <a href="/about.html" class="text-white hover:text-lightning-yellow transition">About</a>
+          <a href="#contact" class="text-white hover:text-lightning-yellow transition">Contact</a>
+        </nav>
+
+        <a href="https://wa.me/918110960489" target="_blank" class="btn-primary text-sm px-4 py-2">WhatsApp</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-24 md:py-32 overflow-hidden">
+      <!-- Video Background -->
+      <div id="hero-video-bg" class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+        <div id="hero-video-container" class="w-full h-full"></div>
+      </div>
+      
+      <!-- Fallback gradient if no video -->
+      <div class="absolute top-1/2 right-0 w-96 h-96 bg-lightning-yellow/5 rounded-full blur-[120px] -translate-y-1/2 z-0"></div>
+      
+      <div class="container mx-auto px-4 relative z-20">
+        <div class="max-w-4xl mx-auto text-center">
+          
+          <div class="inline-flex items-center gap-2 bg-lightning-yellow/10 border border-lightning-yellow/30 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
+            <span class="w-2 h-2 bg-lightning-yellow rounded-full"></span>
+            <span class="text-sm font-medium text-lightning-yellow">Premium Quality Laptops</span>
+          </div>
+          
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6">
+            Smart Laptops.<br>
+            <span class="text-lightning-yellow">Smart Prices.</span>
+          </h1>
+          
+          <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+            Premium refurbished and new laptops at unbeatable prices. Quality tested, warranty backed.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button id="ai-recommend-btn" class="btn-primary flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+              Find My Perfect Laptop
+            </button>
+            <a href="/laptops.html" class="btn-outline">Browse All</a>
+          </div>
+
+          <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-gray-800/50 max-w-md mx-auto backdrop-blur-sm bg-black/20 rounded-2xl p-6">
+            <div>
+              <div class="text-2xl md:text-3xl font-bold text-lightning-yellow mb-1">500+</div>
+              <div class="text-xs md:text-sm text-gray-400">Customers</div>
+            </div>
+            <div>
+              <div class="text-2xl md:text-3xl font-bold text-lightning-yellow mb-1">100%</div>
+              <div class="text-xs md:text-sm text-gray-400">Tested</div>
+            </div>
+            <div>
+              <div class="text-2xl md:text-3xl font-bold text-lightning-yellow mb-1">24/7</div>
+              <div class="text-xs md:text-sm text-gray-400">Support</div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-heading font-bold mb-3">Shop By Category</h2>
+          <p class="text-gray-400">Find the perfect laptop for your needs</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <a href="/laptops.html?condition=New" class="group relative bg-black p-8 rounded-2xl border border-gray-800 hover:border-lightning-yellow transition-all duration-500 text-center overflow-hidden hover:scale-105">
+            <div class="absolute inset-0 bg-lightning-yellow/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="relative z-10">
+              <div class="h-16 w-16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:bg-lightning-yellow group-hover:scale-110 transition-all duration-300 text-2xl shadow-lg">✨</div>
+              <h3 class="font-bold text-lg">New Laptops</h3>
+              <p class="text-sm text-gray-500 mt-1">Latest models</p>
+            </div>
+          </a>
+          <a href="/laptops.html?condition=Refurbished" class="group relative bg-black p-8 rounded-2xl border border-gray-800 hover:border-lightning-yellow transition-all duration-500 text-center overflow-hidden hover:scale-105">
+            <div class="absolute inset-0 bg-lightning-yellow/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="relative z-10">
+              <div class="h-16 w-16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:bg-lightning-yellow group-hover:scale-110 transition-all duration-300 text-2xl shadow-lg">♻️</div>
+              <h3 class="font-bold text-lg">Refurbished</h3>
+              <p class="text-sm text-gray-500 mt-1">Best value</p>
+            </div>
+          </a>
+          <a href="/laptops.html?type=Business" class="group relative bg-black p-8 rounded-2xl border border-gray-800 hover:border-lightning-yellow transition-all duration-500 text-center overflow-hidden hover:scale-105">
+            <div class="absolute inset-0 bg-lightning-yellow/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="relative z-10">
+              <div class="h-16 w-16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:bg-lightning-yellow group-hover:scale-110 transition-all duration-300 text-2xl shadow-lg">💼</div>
+              <h3 class="font-bold text-lg">Business Series</h3>
+              <p class="text-sm text-gray-500 mt-1">Professional</p>
+            </div>
+          </a>
+          <a href="/laptops.html?type=Gaming" class="group relative bg-black p-8 rounded-2xl border border-gray-800 hover:border-lightning-yellow transition-all duration-500 text-center overflow-hidden hover:scale-105">
+            <div class="absolute inset-0 bg-lightning-yellow/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="relative z-10">
+              <div class="h-16 w-16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:bg-lightning-yellow group-hover:scale-110 transition-all duration-300 text-2xl shadow-lg">🎮</div>
+              <h3 class="font-bold text-lg">Gaming</h3>
+              <p class="text-sm text-gray-500 mt-1">High performance</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section id="best-sellers" class="py-24 relative overflow-hidden">
+      <div class="absolute top-20 left-10 w-64 h-64 bg-lightning-yellow/5 rounded-full blur-[100px]"></div>
+      <div class="absolute bottom-20 right-10 w-64 h-64 bg-lightning-yellow/5 rounded-full blur-[100px]"></div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="flex justify-between items-end mb-12">
+          <div>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold mb-3">Best Selling Laptops</h2>
+            <p class="text-gray-400 text-lg">Top picks loved by our customers</p>
+          </div>
+          <a href="/laptops.html" class="text-lightning-yellow hover:underline hidden md:flex items-center gap-2 group">
+            View All 
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+        
+        <div id="best-sellers-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="col-span-full text-center text-gray-500 py-10">
+            <div class="inline-block animate-pulse">Loading best sellers...</div>
+          </div>
+        </div>
+        
+        <div class="mt-12 text-center md:hidden">
+           <a href="/laptops.html" class="btn-outline">View All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-gray-900 border-y border-gray-800">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-heading font-bold mb-12">Why Choose Joshua Computers?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6">
+            <div class="text-4xl mb-4">🛡️</div>
+            <h3 class="text-xl font-bold mb-2">Warranty Support</h3>
+            <p class="text-gray-400">Every device comes with a warranty for your peace of mind.</p>
+          </div>
+          <div class="p-6">
+            <div class="text-4xl mb-4">⚡</div>
+            <h3 class="text-xl font-bold mb-2">Fast Delivery</h3>
+            <p class="text-gray-400">Get your laptop delivered quickly and safely to your doorstep.</p>
+          </div>
+          <div class="p-6">
+            <div class="text-4xl mb-4">🔧</div>
+            <h3 class="text-xl font-bold mb-2">100% Tested</h3>
+            <p class="text-gray-400">Rigorously tested by experts to ensure top-notch quality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black pt-20 pb-10 border-t border-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+          <div>
+            <h3 class="text-2xl font-heading font-bold text-white mb-4">Joshua <span class="text-lightning-yellow">Computers</span></h3>
+            <p class="text-gray-400">Your trusted destination for premium refurbished and new laptops.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="/" class="hover:text-lightning-yellow">Home</a></li>
+              <li><a href="/laptops.html" class="hover:text-lightning-yellow">Laptops</a></li>
+              <li><a href="#about" class="hover:text-lightning-yellow">About Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Contact</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>📞 +91 8110960489</li>
+              <li>📍 Shop Location, City</li>
+              <li>✉️ support@joshuacomputers.com</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Stay Connected</h4>
+            <a href="https://wa.me/918110960489" target="_blank" class="btn-primary inline-block">Chat on WhatsApp</a>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+          &copy; 2024 Joshua Computers. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/home.js"></script>
+  </body>
+</html>
