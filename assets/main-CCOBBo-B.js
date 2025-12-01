@@ -226,7 +226,7 @@ IMPORTANT:
               <div class="text-lightning-yellow font-bold text-2xl">₹${i.price.toLocaleString()}</div>
               <div class="text-xs text-gray-500 mt-1">Inclusive of taxes</div>
             </div>
-            <a href="/product.html?id=${r}" class="btn-outline text-xs py-2 px-4 scale-90 hover:scale-100">
+            <a href="./product.html?id=${r}" class="btn-outline text-xs py-2 px-4 scale-90 hover:scale-100">
               View
             </a>
           </div>
