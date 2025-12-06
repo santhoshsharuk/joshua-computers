@@ -12,6 +12,10 @@ This project uses environment variables to keep sensitive information secure. Al
 - Never hardcode API keys in source code
 - Never commit the `dist/` folder or built assets to Git
 
+**📖 New to this project?** See the detailed [Setup Guide](SETUP.md) for step-by-step instructions.
+
+**🔒 Security concerns?** Read our [Security Policy](SECURITY.md) for handling sensitive data.
+
 ## 🚀 Quick Start
 
 1. **Clone the repository**
