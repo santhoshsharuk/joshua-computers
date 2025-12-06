@@ -20,7 +20,7 @@ This project uses environment variables to keep sensitive information secure. Al
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/santhoshsharuk/joshua-computers.git
    cd joshua-computers
    ```
 
