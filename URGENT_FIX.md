@@ -13,15 +13,35 @@ Your Google API keys (Firebase and Gemini) were exposed in the built files (`ass
 
 The exposed keys are **COMPROMISED** and must be regenerated immediately.
 
-#### Regenerate Firebase Keys:
+#### Secure Your Firebase Configuration:
+
+**Important Note:** Firebase Web API keys are actually safe to be public as long as you have proper security rules. However, if your keys were exposed with weak security rules, follow these steps:
+
+**Option 1: Enable App Check (Recommended)**
 1. Go to [Firebase Console](https://console.firebase.google.com/)
 2. Select your project
-3. Go to **Project Settings** (gear icon) > **General**
-4. Scroll to "Your apps" section
-5. **Delete the existing web app**
-6. Click **Add app** > Web (</>) icon
-7. Register a new app with a nickname
-8. Copy the NEW configuration
+3. Go to **Build** > **App Check**
+4. Click **Get started**
+5. Register your web app with reCAPTCHA v3 or v2
+6. Enable enforcement for Firestore and other services
+
+**Option 2: Restrict API Keys**
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Navigate to **APIs & Services** > **Credentials**
+3. Find your API key
+4. Click **Edit**
+5. Under **Application restrictions**, select **HTTP referrers**
+6. Add your domain (e.g., `yourdomain.com/*`, `*.cloudflare.com/*`)
+7. Click **Save**
+
+**Option 3: Regenerate (if absolutely necessary)**
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Select your project
+3. Go to **Project Settings** > **General**
+4. Delete the existing web app (⚠️ This will break your site until reconfigured!)
+5. Click **Add app** > Web icon
+6. Register a new app and copy the NEW configuration
+7. Update your environment variables immediately
 
 #### Regenerate Google Gemini API Key:
 1. Go to [Google AI Studio](https://makersuite.google.com/app/apikey)

@@ -13,11 +13,23 @@ If you've accidentally committed API keys or secrets to this repository, follow 
 ### 1. Regenerate All Exposed API Keys
 
 **For Firebase:**
+
+⚠️ **Important:** Firebase Web API keys are designed to be public, but only if you have proper security rules. The real issue is usually weak Firestore security rules, not the API key itself.
+
+**Recommended approach:**
+1. **First, verify your Firestore security rules** (in `firestore.rules`)
+2. **Enable Firebase App Check** to protect against abuse:
+   - Go to [Firebase Console](https://console.firebase.google.com/)
+   - Select your project > Build > App Check
+   - Register your web app with reCAPTCHA
+   - Enable enforcement
+
+**Only if absolutely necessary:**
 1. Go to [Firebase Console](https://console.firebase.google.com/)
 2. Select your project
 3. Go to Project Settings > General
-4. Under "Your apps", find your web app
-5. Delete the current app and create a new one with fresh credentials
+4. Under "Your apps", delete the web app (⚠️ will break your site!)
+5. Create a new web app with fresh credentials
 6. Update your `.env` file with the new credentials
 
 **For Google Gemini AI:**
