@@ -2,6 +2,44 @@
 
 A modern laptop e-commerce website with a Black-White-Yellow theme, featuring a public catalog and admin panel.
 
+## ⚠️ IMPORTANT SECURITY NOTICE
+
+**NEVER commit API keys or secrets to your repository!**
+
+This project uses environment variables to keep sensitive information secure. Always:
+- Use `.env` file for local development (already in `.gitignore`)
+- Use platform environment variables for deployment (Cloudflare Pages, Vercel, etc.)
+- Never hardcode API keys in source code
+- Never commit the `dist/` folder or built assets to Git
+
+**📖 New to this project?** See the detailed [Setup Guide](SETUP.md) for step-by-step instructions.
+
+**🔒 Security concerns?** Read our [Security Policy](SECURITY.md) for handling sensitive data.
+
+## 🚀 Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/santhoshsharuk/joshua-computers.git
+   cd joshua-computers
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env
+   ```
+   Then edit `.env` with your actual API keys (see setup guide below).
+
+4. **Run development server**
+   ```bash
+   npm run dev
+   ```
+
 ## 🔥 Firebase Setup Guide
 
 ### 1. Create Firebase Project
@@ -12,16 +50,28 @@ A modern laptop e-commerce website with a Black-White-Yellow theme, featuring a 
 
 ### 2. Configure Environment Variables
 
-Copy your Firebase config from the Firebase Console and paste into `.env`:
+**Create a `.env` file in the project root:**
+
+```bash
+cp .env.example .env
+```
+
+Then edit `.env` with your actual credentials:
 
 ```env
+# Firebase Configuration (from Firebase Console)
 VITE_FIREBASE_API_KEY=your_actual_api_key
 VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
 VITE_FIREBASE_PROJECT_ID=your_project_id
 VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
 VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 VITE_FIREBASE_APP_ID=your_app_id
+
+# Google Gemini AI API Key (from https://makersuite.google.com/app/apikey)
+VITE_GOOGLE_GEMINI_API_KEY=your_google_gemini_api_key
 ```
+
+⚠️ **Important:** Never commit the `.env` file to Git!
 
 ### 3. Enable Firestore Database
 
@@ -87,14 +137,19 @@ To change it, search for `918110960489` and replace with your number.
 npm run build
 ```
 
+**⚠️ SECURITY WARNING:** The `dist/` folder contains your built application and should **NEVER** be committed to Git. It's already in `.gitignore`.
+
 ### Deploy to Cloudflare Pages
 
-1. Push your code to GitHub
+1. Push your **source code** to GitHub (never push the `dist/` folder)
 2. Go to [Cloudflare Pages](https://pages.cloudflare.com/)
 3. Connect your repository
 4. Set build command: `npm run build`
 5. Set output directory: `dist`
-6. Add your environment variables in Cloudflare Pages settings
+6. **IMPORTANT:** Add your environment variables in Cloudflare Pages settings:
+   - Go to Settings > Environment Variables
+   - Add all `VITE_*` variables from your `.env` file
+   - These will be used during the build process
 7. Deploy
 
 ## 📁 Project Structure
@@ -102,7 +157,8 @@ npm run build
 ```
 ├── admin/              # Admin panel pages
 ├── src/                # JavaScript modules and styles
-│   ├── firebase.js     # Firebase config
+│   ├── firebase.js     # Firebase config (uses env vars)
+│   ├── gemini.js       # Gemini AI integration (uses env vars)
 │   ├── admin.js        # Admin logic
 │   ├── home.js         # Home page logic
 │   ├── shop.js         # Products listing logic
@@ -111,9 +167,31 @@ npm run build
 ├── index.html          # Home page
 ├── laptops.html        # Products listing page
 ├── product.html        # Product details page
-├── .env                # Environment variables (DO NOT COMMIT)
+├── .env.example        # Example environment variables (COMMIT THIS)
+├── .env                # Your actual API keys (NEVER COMMIT)
+├── .gitignore          # Git ignore rules (includes .env and dist/)
 └── firestore.rules     # Firestore security rules
 ```
+
+## 🔒 Security Best Practices
+
+1. **Never commit sensitive data:**
+   - `.env` file is in `.gitignore` - keep it there
+   - `dist/` folder is in `.gitignore` - never commit built files
+   
+2. **Use environment variables:**
+   - All API keys use `import.meta.env.VITE_*` pattern
+   - Check `src/firebase.js` and `src/gemini.js` for examples
+
+3. **For deployment:**
+   - Set environment variables in your hosting platform
+   - Let the platform build your app with those variables
+   - Never include API keys in source code
+
+4. **If you accidentally committed secrets:**
+   - Immediately regenerate the API keys
+   - Update them in your `.env` and deployment platform
+   - Consider using `git-filter-branch` or BFG Repo-Cleaner to remove from history
 
 ## 🎨 Customization
 
